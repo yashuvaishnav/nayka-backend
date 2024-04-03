@@ -20,7 +20,7 @@ app.use("/",(req,res)=>{
 })
 
 
-app.listen(8080,async()=>{
+app.listen(process.env.port,async()=>{
     try {
         await connection
         console.log("Server running");
