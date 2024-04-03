@@ -15,6 +15,9 @@ app.use(cors())
 
 app.use("/users",userRouter)
 app.use("/bug",getUserId,bugRouter)
+app.use("/",(req,res)=>{
+    res.send({"msg" : "Link is working fine"})
+})
 
 
 app.listen(8080,async()=>{
